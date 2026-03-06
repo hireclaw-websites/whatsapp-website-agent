@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>WhatsApp Website Agent — Text it. Get a website.</title>
+  <meta name='description' content='Build a live website by chatting in WhatsApp. No builders, dashboards, or setup rituals.'>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link rel='stylesheet' href='styles.css'>
+  <script defer src='script.js'></script>
+</head>
+<body>
+  <a class='fab-wa js-wa' data-text='Hi — I want to build a website in WhatsApp.' href='#cta' aria-label='Start in WhatsApp'>
+    <span class='fab-icon'>✦</span>
+    <span>Start in WhatsApp</span>
+  </a>
+
+  <div class='rail'>
+    <span class='rail-dot'></span>
+    <span class='rail-text mono'>CHAT READY</span>
+  </div>
+
+  <header class='topbar'>
+    <a class='brand' href='#top' aria-label='WhatsApp Website Agent home'>
+      <span class='brand-mark'>WA</span>
+      <span class='brand-copy'>
+        <strong>WhatsApp Website Agent</strong>
+        <em>sites made by message</em>
+      </span>
+    </a>
+    <nav class='nav' aria-label='Primary'>
+      <a href='#how'>How it works</a>
+      <a href='#examples'>Examples</a>
+      <a href='#builds'>What it builds</a>
+      <a href='#pricing'>Pricing</a>
+      <a href='#faq'>FAQ</a>
+      <a class='mini-wa js-wa' data-text='Hi — I want to build a website in WhatsApp.' href='#cta'>Start in WhatsApp</a>
+    </nav>
+  </header>
+
+  <main id='top'>
+    <section class='hero scene'>
+      <div class='hero-copy reveal'>
+        <p class='eyebrow mono'>THE CONVERSATION BECOMES THE WEBSITE</p>
+        <h1>Text it.<br>Get a website.</h1>
+        <p class='lede'>Describe the business in WhatsApp. The agent drafts the site, applies edits, and gets it live — all from the chat you already know how to use.</p>
+        <div class='hero-actions'>
+          <a class='button button-wa js-wa' data-text='Hi — I want to build a website in WhatsApp.' href='#cta'>Start in WhatsApp</a>
+          <a class='button button-ghost' href='#examples'>See prompt → site</a>
+        </div>
+        <ul class='proofline'>
+          <li>No builder to learn</li>
+          <li>Edits by message</li>
+          <li>Live site, fast</li>
+        </ul>
+      </div>
+
+      <div class='stage reveal'>
+        <div class='chat-tower card'>
+          <div class='card-head'>
+            <span class='mono'>INPUT / CHAT</span>
+            <span class='mono'>LIVE BUILD</span>
+          </div>
+          <div class='message-stack' id='heroChat'>
+            <div class='msg user is-on'>
+              <p>Build a simple site for my coffee cart.</p>
+              <span class='mono'>09:14 ✓✓</span>
+            </div>
+            <div class='msg agent'>
+              <p>Drafting a one-page homepage now.</p>
+              <span class='mono'>09:14</span>
+            </div>
+            <div class='msg user'>
+              <p>Make it darker. Add menu and map.</p>
+              <span class='mono'>09:15 ✓✓</span>
+            </div>
+            <div class='msg user'>
+              <p>Use WhatsApp as the main action.</p>
+              <span class='mono'>09:15 ✓✓</span>
+            </div>
+            <div class='msg agent'>
+              <p>Done. Preview ready to publish.</p>
+              <span class='mono'>09:16</span>
+            </div>
+          </div>
+          <div class='typing'>
+            <i></i><i></i><i></i>
+            <span class='mono'>agent is building</span>
+          </div>
+        </div>
+
+        <div class='output-board card'>
+          <div class='browser'>
+            <div class='browser-bar'>
+              <b></b><b></b><b></b>
+              <span class='mono'>generated preview</span>
+            </div>
+            <div class='preview' id='heroPreview'>
+              <p class='preview-kicker mono' id='heroKicker'>DRAFT 01</p>
+              <h2 id='heroTitle'>Night Cart Coffee</h2>
+              <p id='heroText'>Small-batch espresso for markets, late events, and office pop-ins.</p>
+              <div class='preview-actions'>
+                <span class='preview-button' id='heroButton'>Chat to book</span>
+                <span class='preview-note mono' id='heroStatus'>structure built</span>
+              </div>
+              <div class='preview-grid'>
+                <div class='preview-block tall'>
+                  <strong id='heroBlock1'>Menu</strong>
+                  <span id='heroMeta1'>Espresso • Oat latte • Cold brew</span>
+                </div>
+                <div class='preview-block'>
+                  <strong id='heroBlock2'>Events</strong>
+                  <span id='heroMeta2'>Weddings • launches • markets</span>
+                </div>
+                <div class='preview-block'>
+                  <strong id='heroBlock3'>Location</strong>
+                  <span id='heroMeta3'>Weekly route + live map</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='annotation a1 mono'>message becomes structure ↗</div>
+          <div class='annotation a2 mono'>follow-up edits apply instantly ↘</div>
+        </div>
+      </div>
+    </section>
+
+    <section id='how' class='flow scene reveal'>
+      <div class='section-head'>
+        <p class='eyebrow mono'>HOW IT WORKS</p>
+        <h2>Message → draft → refine → publish.</h2>
+      </div>
+      <div class='flow-track'>
+        <article class='flow-step'>
+          <span class='step-no mono'>01</span>
+          <h3>Send the brief like a normal chat.</h3>
+          <p>Business name, offer, tone, links, or just a rough idea.</p>
+        </article>
+        <article class='flow-step'>
+          <span class='step-no mono'>02</span>
+          <h3>Get a working website draft.</h3>
+          <p>Real sections appear immediately instead of a blank editor.</p>
+        </article>
+        <article class='flow-step'>
+          <span class='step-no mono'>03</span>
+          <h3>Reply with edits in plain language.</h3>
+          <p>Make it darker. Add pricing. Move testimonials higher.</p>
+        </article>
+        <article class='flow-step'>
+          <span class='step-no mono'>04</span>
+          <h3>Publish when it looks right.</h3>
+          <p>Domain, mobile polish, technical setup, and handoff handled.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id='examples' class='examples scene'>
+      <div class='section-head reveal'>
+        <p class='eyebrow mono'>PROMPT → SITE</p>
+        <h2>Examples framed as real conversations, not templates.</h2>
+      </div>
+
+      <article class='example-card reveal'>
+        <div class='example-thread'>
+          <p class='mono small-label'>CREATOR LAUNCH</p>
+          <div class='mini-msg user'><p>I need a workshop page for my notion class.</p></div>
+          <div class='mini-msg user'><p>Keep it clean. Add dates, price, and testimonials.</p></div>
+          <div class='mini-msg agent'><p>Built: hero, schedule, proof, checkout CTA.</p></div>
+        </div>
+        <div class='example-site violet'>
+          <div class='pin mono'>LIVE OUTPUT</div>
+          <h3>Build Better Systems</h3>
+          <p>Learn Notion workflows in a live 90-minute workshop.</p>
+          <div class='site-rows'>
+            <span>June 18</span><span>$79</span><span>12 seats</span>
+          </div>
+          <div class='quote'>‘Exactly enough detail to buy.’</div>
+        </div>
+      </article>
+
+      <article class='example-card reverse reveal'>
+        <div class='example-thread'>
+          <p class='mono small-label'>LOCAL BUSINESS</p>
+          <div class='mini-msg user'><p>Make a homepage for my barbershop.</p></div>
+          <div class='mini-msg user'><p>Add services, opening hours, map, and WhatsApp booking.</p></div>
+          <div class='mini-msg agent'><p>Built: landing page with service list and booking action.</p></div>
+        </div>
+        <div class='example-site green'>
+          <div class='pin mono'>LIVE OUTPUT</div>
+          <h3>Northside Cuts</h3>
+          <p>Sharp fades, beard work, and walk-ins six days a week.</p>
+          <div class='site-rows'>
+            <span>Cut from $25</span><span>Open until 8pm</span><span>Map + reviews</span>
+          </div>
+          <div class='quote'>Main CTA goes straight to chat.</div>
+        </div>
+      </article>
+
+      <article class='example-card reveal'>
+        <div class='example-thread'>
+          <p class='mono small-label'>AGENCY RELAY</p>
+          <div class='mini-msg user'><p>Client needs a one-pager for a property launch.</p></div>
+          <div class='mini-msg user'><p>Minimal look. Add inquiry form and location gallery.</p></div>
+          <div class='mini-msg agent'><p>Built: premium landing page draft ready for approval.</p></div>
+        </div>
+        <div class='example-site cobalt'>
+          <div class='pin mono'>LIVE OUTPUT</div>
+          <h3>Harbor Residences</h3>
+          <p>Waterfront apartments with a fast path to inquiries.</p>
+          <div class='site-rows'>
+            <span>Gallery</span><span>Availability</span><span>Inquiry CTA</span>
+          </div>
+          <div class='quote'>Client notes in, polished page out.</div>
+        </div>
+      </article>
+    </section>
+
+    <section id='for' class='jobs scene reveal'>
+      <div class='section-head'>
+        <p class='eyebrow mono'>WHO IT IS FOR</p>
+        <h2>Built for people who already run work through chat.</h2>
+      </div>
+      <div class='job-board'>
+        <div class='job-row'>
+          <strong>Solo founders</strong>
+          <span>You text the idea tonight.</span>
+          <span>It ships as a credible homepage fast.</span>
+        </div>
+        <div class='job-row'>
+          <strong>Small businesses</strong>
+          <span>You send hours, services, and a few photos.</span>
+          <span>It turns into a bookable local site.</span>
+        </div>
+        <div class='job-row'>
+          <strong>Creators</strong>
+          <span>You describe the offer and launch date.</span>
+          <span>It becomes a page that can sell the thing.</span>
+        </div>
+        <div class='job-row'>
+          <strong>Agencies</strong>
+          <span>You relay messy client notes.</span>
+          <span>It returns clean drafts you can approve or pass on.</span>
+        </div>
+        <div class='job-row'>
+          <strong>Non-technical operators</strong>
+          <span>You ask for edits in plain language.</span>
+          <span>It updates without dashboards or handholding.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id='builds' class='capabilities scene reveal'>
+      <div class='section-head'>
+        <p class='eyebrow mono'>WHAT THE AGENT CAN BUILD</p>
+        <h2>A practical capability board, not a feature wall.</h2>
+      </div>
+      <div class='cap-grid'>
+        <article class='cap-card'>
+          <p class='mono'>PAGES</p>
+          <ul>
+            <li>Landing pages</li>
+            <li>Business homepages</li>
+            <li>Portfolio sites</li>
+            <li>Event pages</li>
+            <li>Lead capture pages</li>
+          </ul>
+        </article>
+        <article class='cap-card'>
+          <p class='mono'>SECTIONS</p>
+          <ul>
+            <li>Hero + offer</li>
+            <li>Services and pricing</li>
+            <li>Testimonials</li>
+            <li>FAQs</li>
+            <li>Contact and maps</li>
+          </ul>
+        </article>
+        <article class='cap-card'>
+          <p class='mono'>CHAT-NATIVE ACTIONS</p>
+          <ul>
+            <li>WhatsApp CTAs</li>
+            <li>Inquiry flows</li>
+            <li>Lead forms</li>
+            <li>Booking prompts</li>
+            <li>Announcement pages</li>
+          </ul>
+        </article>
+        <article class='cap-card'>
+          <p class='mono'>OPS</p>
+          <ul>
+            <li>Mobile-first layout</li>
+            <li>Domain connection</li>
+            <li>Hosting setup</li>
+            <li>Editable content</li>
+            <li>Ownership handoff</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id='proof' class='proof scene reveal'>
+      <div class='section-head'>
+        <p class='eyebrow mono'>FRICTION KILLERS</p>
+        <h2>The usual blockers, handled in plain language.</h2>
+      </div>
+      <div class='proof-grid'>
+        <article class='proof-card'>
+          <span class='mono'>SPEED</span>
+          <h3>From blank page to working draft fast.</h3>
+          <p>You start with a message, not a setup sequence.</p>
+        </article>
+        <article class='proof-card'>
+          <span class='mono'>EDITS</span>
+          <h3>Changes happen through follow-up messages.</h3>
+          <p>No blocks, canvases, or hidden settings to decipher.</p>
+        </article>
+        <article class='proof-card'>
+          <span class='mono'>OWNERSHIP</span>
+          <h3>Your site, your domain, your content.</h3>
+          <p>The output is meant to be useful, readable, and handoff-friendly.</p>
+        </article>
+        <article class='proof-card'>
+          <span class='mono'>SETUP</span>
+          <h3>Technical polish without technical rituals.</h3>
+          <p>Hosting, mobile responsiveness, and launch details are part of the path.</p>
+        </article>
+      </div>
+      <div class='stamp-row mono'>
+        <span>NO DASHBOARD</span>
+        <span>MOBILE-FIRST</span>
+        <span>VISIBLE PROCESS</span>
+        <span>CHAT AS THE INTERFACE</span>
+      </div>
+    </section>
+
+    <section id='pricing' class='pricing scene reveal'>
+      <div class='invoice'>
+        <div class='invoice-main'>
+          <p class='eyebrow mono'>PRICING / ACCESS</p>
+          <h2>Start in chat. Pay when you want it live.</h2>
+          <div class='price-line'><span>Drafts and iterations</span><strong>Free to start</strong></div>
+          <div class='price-line'><span>Publish + hosting</span><strong>From $29/mo</strong></div>
+          <div class='price-line'><span>Custom builds or agency relay</span><strong>Quoted in WhatsApp</strong></div>
+          <div class='hero-actions'>
+            <a class='button button-wa js-wa' data-text='Hi — I want to start a website draft in WhatsApp.' href='#cta'>Start a draft in WhatsApp</a>
+          </div>
+        </div>
+        <aside class='invoice-side'>
+          <p class='mono'>INCLUDED IN THE WORKFLOW</p>
+          <ul>
+            <li>Plain-language briefing</li>
+            <li>Drafts you can react to quickly</li>
+            <li>Edits by message</li>
+            <li>Launch support</li>
+            <li>Clear ownership</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id='faq' class='faq scene reveal'>
+      <div class='section-head'>
+        <p class='eyebrow mono'>FAQ</p>
+        <h2>Short answers. No funnel language.</h2>
+      </div>
+      <div class='faq-list'>
+        <details open>
+          <summary>Do I need to use a website builder?</summary>
+          <p>No. The point is that the workflow happens in WhatsApp instead of inside a builder dashboard.</p>
+        </details>
+        <details>
+          <summary>Can I ask for changes after the first draft?</summary>
+          <p>Yes. Reply with edits exactly how you would message a person: add pricing, change colors, move sections, simplify copy.</p>
+        </details>
+        <details>
+          <summary>Can it work for local businesses and simple service sites?</summary>
+          <p>Yes. It is especially useful for offers that need a clear homepage, contact path, social proof, and mobile-friendly action.</p>
+        </details>
+        <details>
+          <summary>What about domains and launch setup?</summary>
+          <p>The publish path includes the practical setup work so you do not need to stitch tools together yourself.</p>
+        </details>
+        <details>
+          <summary>Can agencies use it with clients?</summary>
+          <p>Yes. Agencies can relay rough notes in chat and use the drafts as a fast approval and production layer.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id='cta' class='cta-strip scene reveal'>
+      <div class='composer'>
+        <div class='composer-top'>
+          <p class='mono'>OPEN A THREAD, NOT A PROJECT</p>
+          <h2>Send the first message and start building.</h2>
+        </div>
+        <div class='composer-body'>
+          <span class='prefill'>Hi — build me a simple site for my business. Dark look. Add WhatsApp CTA and testimonials.</span>
+          <a class='button button-wa js-wa' data-text='Hi — build me a simple site for my business. Dark look. Add WhatsApp CTA and testimonials.' href='#'>Open WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class='footer'>
+    <p>WhatsApp Website Agent</p>
+    <p class='mono'>A website builder collapsed into a conversation.</p>
+  </footer>
+</body>
+</html>
