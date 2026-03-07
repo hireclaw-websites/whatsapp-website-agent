@@ -1,410 +1,383 @@
 <!doctype html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>WhatsApp Website Agent — Text it. Get a website.</title>
-  <meta name='description' content='Build a live website by chatting in WhatsApp. No builders, dashboards, or setup rituals.'>
-  <link rel='preconnect' href='https://fonts.googleapis.com'>
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link rel='stylesheet' href='styles.css'>
-  <script defer src='script.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>phydgital.plus — Prompt in. Geometry out.</title>
+  <meta name="description" content="Text-to-3D generation and node-based editing for creators who want speed without losing control.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <a class='fab-wa js-wa' data-text='Hi — I want to build a website in WhatsApp.' href='#cta' aria-label='Start in WhatsApp'>
-    <span class='fab-icon'>✦</span>
-    <span>Start in WhatsApp</span>
-  </a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
 
-  <div class='rail'>
-    <span class='rail-dot'></span>
-    <span class='rail-text mono'>CHAT READY</span>
-  </div>
-
-  <header class='topbar'>
-    <a class='brand' href='#top' aria-label='WhatsApp Website Agent home'>
-      <span class='brand-mark'>WA</span>
-      <span class='brand-copy'>
-        <strong>WhatsApp Website Agent</strong>
-        <em>sites made by message</em>
-      </span>
+  <header class="topbar">
+    <a href="#generate" class="brand">
+      <span class="brand-mark"></span>
+      <span>phydgital.plus</span>
     </a>
-    <nav class='nav' aria-label='Primary'>
-      <a href='#how'>How it works</a>
-      <a href='#examples'>Examples</a>
-      <a href='#builds'>What it builds</a>
-      <a href='#pricing'>Pricing</a>
-      <a href='#faq'>FAQ</a>
-      <a class='mini-wa js-wa' data-text='Hi — I want to build a website in WhatsApp.' href='#cta'>Start in WhatsApp</a>
+    <nav class="nav">
+      <a href="#generate">Generate</a>
+      <a href="#templates">Templates</a>
+      <a href="#editor">Node Editor</a>
+      <a href="#outputs">Outputs</a>
+      <a href="#start">Start</a>
     </nav>
+    <a class="tool-btn" href="https://phydgital.plus" target="_blank" rel="noreferrer">Open Workbench</a>
   </header>
 
-  <main id='top'>
-    <section class='hero scene'>
-      <div class='hero-copy reveal'>
-        <p class='eyebrow mono'>THE CONVERSATION BECOMES THE WEBSITE</p>
-        <h1>Text it.<br>Get a website.</h1>
-        <p class='lede'>Describe the business in WhatsApp. The agent drafts the site, applies edits, and gets it live — all from the chat you already know how to use.</p>
-        <div class='hero-actions'>
-          <a class='button button-wa js-wa' data-text='Hi — I want to build a website in WhatsApp.' href='#cta'>Start in WhatsApp</a>
-          <a class='button button-ghost' href='#examples'>See prompt → site</a>
-        </div>
-        <ul class='proofline'>
-          <li>No builder to learn</li>
-          <li>Edits by message</li>
-          <li>Live site, fast</li>
-        </ul>
+  <main>
+    <section class="station hero reveal" id="generate">
+      <div class="station-head">
+        <span>station_01</span>
+        <p>object genesis</p>
       </div>
 
-      <div class='stage reveal'>
-        <div class='chat-tower card'>
-          <div class='card-head'>
-            <span class='mono'>INPUT / CHAT</span>
-            <span class='mono'>LIVE BUILD</span>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow">The Generative Workbench</p>
+          <h1>Prompt in.<br>Geometry out.</h1>
+          <p class="lead">Text-to-3D generation paired with a node-based editor, starter modules, and export-ready assets that stay editable after the first result.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Start Generating</a>
+            <a class="btn btn-secondary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Open Editor</a>
+            <a class="btn btn-ghost" href="mailto:hello@phydgital.plus?subject=Request%20access%20to%20phydgital.plus">Request Access</a>
           </div>
-          <div class='message-stack' id='heroChat'>
-            <div class='msg user is-on'>
-              <p>Build a simple site for my coffee cart.</p>
-              <span class='mono'>09:14 ✓✓</span>
-            </div>
-            <div class='msg agent'>
-              <p>Drafting a one-page homepage now.</p>
-              <span class='mono'>09:14</span>
-            </div>
-            <div class='msg user'>
-              <p>Make it darker. Add menu and map.</p>
-              <span class='mono'>09:15 ✓✓</span>
-            </div>
-            <div class='msg user'>
-              <p>Use WhatsApp as the main action.</p>
-              <span class='mono'>09:15 ✓✓</span>
-            </div>
-            <div class='msg agent'>
-              <p>Done. Preview ready to publish.</p>
-              <span class='mono'>09:16</span>
-            </div>
-          </div>
-          <div class='typing'>
-            <i></i><i></i><i></i>
-            <span class='mono'>agent is building</span>
-          </div>
+          <ul class="hero-meta">
+            <li>text → volume</li>
+            <li>volume → graph</li>
+            <li>graph → export</li>
+          </ul>
         </div>
 
-        <div class='output-board card'>
-          <div class='browser'>
-            <div class='browser-bar'>
-              <b></b><b></b><b></b>
-              <span class='mono'>generated preview</span>
+        <div class="chamber-panel">
+          <div class="prompt-strip">
+            <span class="prompt-label">prompt</span>
+            <span class="typed" aria-live="polite"></span><span class="cursor"></span>
+            <span class="strip-status">parse / build / route</span>
+          </div>
+
+          <div class="object-chamber" data-phase="0">
+            <div class="axis axis-x"></div>
+            <div class="axis axis-y"></div>
+            <div class="axis axis-z"></div>
+            <div class="bounding-box">
+              <span class="measure top">112u</span>
+              <span class="measure side">84u</span>
+              <span class="measure bottom">editable topology</span>
             </div>
-            <div class='preview' id='heroPreview'>
-              <p class='preview-kicker mono' id='heroKicker'>DRAFT 01</p>
-              <h2 id='heroTitle'>Night Cart Coffee</h2>
-              <p id='heroText'>Small-batch espresso for markets, late events, and office pop-ins.</p>
-              <div class='preview-actions'>
-                <span class='preview-button' id='heroButton'>Chat to book</span>
-                <span class='preview-note mono' id='heroStatus'>structure built</span>
+
+            <div class="route-map" aria-hidden="true">
+              <svg viewBox="0 0 900 520" preserveAspectRatio="none">
+                <path class="signal signal-a" d="M96 400 C170 400 178 314 242 314 S352 410 430 410 534 302 612 302 708 370 804 370"/>
+                <path class="signal signal-b" d="M104 446 C188 446 202 246 296 246 S434 392 500 392 608 208 692 208 772 248 822 248"/>
+                <path class="signal signal-c" d="M112 326 C196 326 224 176 320 176 S446 294 534 294 626 144 714 144 772 164 836 164"/>
+              </svg>
+            </div>
+
+            <div class="object-stack" aria-hidden="true">
+              <div class="primitive-cube">
+                <span></span><span></span><span></span>
               </div>
-              <div class='preview-grid'>
-                <div class='preview-block tall'>
-                  <strong id='heroBlock1'>Menu</strong>
-                  <span id='heroMeta1'>Espresso • Oat latte • Cold brew</span>
-                </div>
-                <div class='preview-block'>
-                  <strong id='heroBlock2'>Events</strong>
-                  <span id='heroMeta2'>Weddings • launches • markets</span>
-                </div>
-                <div class='preview-block'>
-                  <strong id='heroBlock3'>Location</strong>
-                  <span id='heroMeta3'>Weekly route + live map</span>
-                </div>
+              <div class="resolved-model">
+                <div class="halo"></div>
+                <div class="mesh"></div>
+                <div class="surface"></div>
+                <div class="scan scan-a"></div>
+                <div class="scan scan-b"></div>
               </div>
             </div>
+
+            <div class="chamber-floor"></div>
           </div>
-          <div class='annotation a1 mono'>message becomes structure ↗</div>
-          <div class='annotation a2 mono'>follow-up edits apply instantly ↘</div>
+
+          <div class="chamber-readout">
+            <div><span>input</span><strong>language parsed</strong></div>
+            <div><span>volume</span><strong>primitive assembled</strong></div>
+            <div><span>logic</span><strong>nodes linked</strong></div>
+            <div><span>asset</span><strong>export ready</strong></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id='how' class='flow scene reveal'>
-      <div class='section-head'>
-        <p class='eyebrow mono'>HOW IT WORKS</p>
-        <h2>Message → draft → refine → publish.</h2>
-      </div>
-      <div class='flow-track'>
-        <article class='flow-step'>
-          <span class='step-no mono'>01</span>
-          <h3>Send the brief like a normal chat.</h3>
-          <p>Business name, offer, tone, links, or just a rough idea.</p>
-        </article>
-        <article class='flow-step'>
-          <span class='step-no mono'>02</span>
-          <h3>Get a working website draft.</h3>
-          <p>Real sections appear immediately instead of a blank editor.</p>
-        </article>
-        <article class='flow-step'>
-          <span class='step-no mono'>03</span>
-          <h3>Reply with edits in plain language.</h3>
-          <p>Make it darker. Add pricing. Move testimonials higher.</p>
-        </article>
-        <article class='flow-step'>
-          <span class='step-no mono'>04</span>
-          <h3>Publish when it looks right.</h3>
-          <p>Domain, mobile polish, technical setup, and handoff handled.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id='examples' class='examples scene'>
-      <div class='section-head reveal'>
-        <p class='eyebrow mono'>PROMPT → SITE</p>
-        <h2>Examples framed as real conversations, not templates.</h2>
+    <section class="station modes reveal">
+      <div class="station-head">
+        <span>station_02</span>
+        <p>two operating modes</p>
       </div>
 
-      <article class='example-card reveal'>
-        <div class='example-thread'>
-          <p class='mono small-label'>CREATOR LAUNCH</p>
-          <div class='mini-msg user'><p>I need a workshop page for my notion class.</p></div>
-          <div class='mini-msg user'><p>Keep it clean. Add dates, price, and testimonials.</p></div>
-          <div class='mini-msg agent'><p>Built: hero, schedule, proof, checkout CTA.</p></div>
-        </div>
-        <div class='example-site violet'>
-          <div class='pin mono'>LIVE OUTPUT</div>
-          <h3>Build Better Systems</h3>
-          <p>Learn Notion workflows in a live 90-minute workshop.</p>
-          <div class='site-rows'>
-            <span>June 18</span><span>$79</span><span>12 seats</span>
+      <div class="mode-grid">
+        <article class="mode-card">
+          <div class="mode-top">
+            <span class="mode-index">01</span>
+            <h2>Generate from text</h2>
           </div>
-          <div class='quote'>‘Exactly enough detail to buy.’</div>
-        </div>
-      </article>
-
-      <article class='example-card reverse reveal'>
-        <div class='example-thread'>
-          <p class='mono small-label'>LOCAL BUSINESS</p>
-          <div class='mini-msg user'><p>Make a homepage for my barbershop.</p></div>
-          <div class='mini-msg user'><p>Add services, opening hours, map, and WhatsApp booking.</p></div>
-          <div class='mini-msg agent'><p>Built: landing page with service list and booking action.</p></div>
-        </div>
-        <div class='example-site green'>
-          <div class='pin mono'>LIVE OUTPUT</div>
-          <h3>Northside Cuts</h3>
-          <p>Sharp fades, beard work, and walk-ins six days a week.</p>
-          <div class='site-rows'>
-            <span>Cut from $25</span><span>Open until 8pm</span><span>Map + reviews</span>
+          <p>Start with direct language instead of a blank viewport. Describe a form, material direction, or object family and get structured geometry fast.</p>
+          <div class="mode-visual visual-generate" aria-hidden="true">
+            <div class="mini-prompt">ribbed sports bottle with metal cap</div>
+            <div class="mini-flow"><span></span><span></span><span></span></div>
+            <div class="mini-volume"></div>
           </div>
-          <div class='quote'>Main CTA goes straight to chat.</div>
-        </div>
-      </article>
-
-      <article class='example-card reveal'>
-        <div class='example-thread'>
-          <p class='mono small-label'>AGENCY RELAY</p>
-          <div class='mini-msg user'><p>Client needs a one-pager for a property launch.</p></div>
-          <div class='mini-msg user'><p>Minimal look. Add inquiry form and location gallery.</p></div>
-          <div class='mini-msg agent'><p>Built: premium landing page draft ready for approval.</p></div>
-        </div>
-        <div class='example-site cobalt'>
-          <div class='pin mono'>LIVE OUTPUT</div>
-          <h3>Harbor Residences</h3>
-          <p>Waterfront apartments with a fast path to inquiries.</p>
-          <div class='site-rows'>
-            <span>Gallery</span><span>Availability</span><span>Inquiry CTA</span>
-          </div>
-          <div class='quote'>Client notes in, polished page out.</div>
-        </div>
-      </article>
-    </section>
-
-    <section id='for' class='jobs scene reveal'>
-      <div class='section-head'>
-        <p class='eyebrow mono'>WHO IT IS FOR</p>
-        <h2>Built for people who already run work through chat.</h2>
-      </div>
-      <div class='job-board'>
-        <div class='job-row'>
-          <strong>Solo founders</strong>
-          <span>You text the idea tonight.</span>
-          <span>It ships as a credible homepage fast.</span>
-        </div>
-        <div class='job-row'>
-          <strong>Small businesses</strong>
-          <span>You send hours, services, and a few photos.</span>
-          <span>It turns into a bookable local site.</span>
-        </div>
-        <div class='job-row'>
-          <strong>Creators</strong>
-          <span>You describe the offer and launch date.</span>
-          <span>It becomes a page that can sell the thing.</span>
-        </div>
-        <div class='job-row'>
-          <strong>Agencies</strong>
-          <span>You relay messy client notes.</span>
-          <span>It returns clean drafts you can approve or pass on.</span>
-        </div>
-        <div class='job-row'>
-          <strong>Non-technical operators</strong>
-          <span>You ask for edits in plain language.</span>
-          <span>It updates without dashboards or handholding.</span>
-        </div>
-      </div>
-    </section>
-
-    <section id='builds' class='capabilities scene reveal'>
-      <div class='section-head'>
-        <p class='eyebrow mono'>WHAT THE AGENT CAN BUILD</p>
-        <h2>A practical capability board, not a feature wall.</h2>
-      </div>
-      <div class='cap-grid'>
-        <article class='cap-card'>
-          <p class='mono'>PAGES</p>
-          <ul>
-            <li>Landing pages</li>
-            <li>Business homepages</li>
-            <li>Portfolio sites</li>
-            <li>Event pages</li>
-            <li>Lead capture pages</li>
+          <ul class="mode-list">
+            <li>Fast concept-to-form starting point</li>
+            <li>Template-ready prompt inputs</li>
+            <li>Built for creators, not demo theatre</li>
           </ul>
         </article>
-        <article class='cap-card'>
-          <p class='mono'>SECTIONS</p>
-          <ul>
-            <li>Hero + offer</li>
-            <li>Services and pricing</li>
-            <li>Testimonials</li>
-            <li>FAQs</li>
-            <li>Contact and maps</li>
-          </ul>
-        </article>
-        <article class='cap-card'>
-          <p class='mono'>CHAT-NATIVE ACTIONS</p>
-          <ul>
-            <li>WhatsApp CTAs</li>
-            <li>Inquiry flows</li>
-            <li>Lead forms</li>
-            <li>Booking prompts</li>
-            <li>Announcement pages</li>
-          </ul>
-        </article>
-        <article class='cap-card'>
-          <p class='mono'>OPS</p>
-          <ul>
-            <li>Mobile-first layout</li>
-            <li>Domain connection</li>
-            <li>Hosting setup</li>
-            <li>Editable content</li>
-            <li>Ownership handoff</li>
+
+        <article class="mode-card mode-card-alt">
+          <div class="mode-top">
+            <span class="mode-index">02</span>
+            <h2>Edit through nodes</h2>
+          </div>
+          <p>Branch the result into an editable graph. Route variation, structure, and material logic without treating the output like a black box.</p>
+          <div class="mode-visual visual-edit" aria-hidden="true">
+            <div class="mini-node n1">prompt</div>
+            <div class="mini-node n2">shape</div>
+            <div class="mini-node n3">detail</div>
+            <div class="mini-node n4">material</div>
+            <div class="mini-node n5">export</div>
+            <svg viewBox="0 0 400 210" preserveAspectRatio="none">
+              <path d="M58 36 C112 36 110 86 170 86"/>
+              <path d="M170 86 C226 86 218 40 278 40"/>
+              <path d="M170 86 C220 86 224 148 282 148"/>
+              <path d="M282 148 C326 148 330 94 360 94"/>
+              <path d="M278 40 C328 40 330 94 360 94"/>
+            </svg>
+          </div>
+          <ul class="mode-list">
+            <li>Editable procedural control</li>
+            <li>Visible signal flow, not hidden automation</li>
+            <li>Reusable graph logic for repeatable outputs</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section id='proof' class='proof scene reveal'>
-      <div class='section-head'>
-        <p class='eyebrow mono'>FRICTION KILLERS</p>
-        <h2>The usual blockers, handled in plain language.</h2>
+    <section class="station templates reveal" id="templates">
+      <div class="station-head">
+        <span>station_03</span>
+        <p>starter modules</p>
       </div>
-      <div class='proof-grid'>
-        <article class='proof-card'>
-          <span class='mono'>SPEED</span>
-          <h3>From blank page to working draft fast.</h3>
-          <p>You start with a message, not a setup sequence.</p>
-        </article>
-        <article class='proof-card'>
-          <span class='mono'>EDITS</span>
-          <h3>Changes happen through follow-up messages.</h3>
-          <p>No blocks, canvases, or hidden settings to decipher.</p>
-        </article>
-        <article class='proof-card'>
-          <span class='mono'>OWNERSHIP</span>
-          <h3>Your site, your domain, your content.</h3>
-          <p>The output is meant to be useful, readable, and handoff-friendly.</p>
-        </article>
-        <article class='proof-card'>
-          <span class='mono'>SETUP</span>
-          <h3>Technical polish without technical rituals.</h3>
-          <p>Hosting, mobile responsiveness, and launch details are part of the path.</p>
-        </article>
-      </div>
-      <div class='stamp-row mono'>
-        <span>NO DASHBOARD</span>
-        <span>MOBILE-FIRST</span>
-        <span>VISIBLE PROCESS</span>
-        <span>CHAT AS THE INTERFACE</span>
-      </div>
-    </section>
 
-    <section id='pricing' class='pricing scene reveal'>
-      <div class='invoice'>
-        <div class='invoice-main'>
-          <p class='eyebrow mono'>PRICING / ACCESS</p>
-          <h2>Start in chat. Pay when you want it live.</h2>
-          <div class='price-line'><span>Drafts and iterations</span><strong>Free to start</strong></div>
-          <div class='price-line'><span>Publish + hosting</span><strong>From $29/mo</strong></div>
-          <div class='price-line'><span>Custom builds or agency relay</span><strong>Quoted in WhatsApp</strong></div>
-          <div class='hero-actions'>
-            <a class='button button-wa js-wa' data-text='Hi — I want to start a website draft in WhatsApp.' href='#cta'>Start a draft in WhatsApp</a>
+      <div class="templates-layout">
+        <div class="template-rack" role="tablist" aria-label="Template rack">
+          <button class="template-chip is-active" data-model="is-chair" data-title="Industrial Stool" data-text="Stable hard-surface starter for seating, fixtures, and product mockups." data-tags="hard-surface|furniture|clean topology">01 / stool frame</button>
+          <button class="template-chip" data-model="is-drone" data-title="Camera Drone" data-text="Balanced body and arm layout for aerial devices, robotics, and modular hardware." data-tags="robotics|product viz|symmetry">02 / drone rig</button>
+          <button class="template-chip" data-model="is-bottle" data-title="Ribbed Bottle" data-text="Container base with controllable silhouette, neck detail, and material treatment." data-tags="packaging|consumer object|surface detail">03 / bottle shell</button>
+          <button class="template-chip" data-model="is-vehicle" data-title="Concept Vehicle" data-text="Fast blockout for transport forms, wheels, cab volumes, and shell experiments." data-tags="mobility|game asset|rapid ideation">04 / vehicle body</button>
+          <button class="template-chip" data-model="is-helmet" data-title="Utility Helmet" data-text="Protective shell starter with visor, seam splits, and accessory mount zones." data-tags="wearable|sci-fi prop|modular">05 / helmet shell</button>
+        </div>
+
+        <div class="template-preview">
+          <div class="preview-stage is-chair">
+            <div class="preview-grid"></div>
+            <div class="template-object" aria-hidden="true">
+              <span class="body"></span>
+              <span class="part-a"></span>
+              <span class="part-b"></span>
+              <span class="part-c"></span>
+              <span class="part-d"></span>
+              <span class="part-e"></span>
+            </div>
+          </div>
+          <div class="preview-meta">
+            <p class="eyebrow">Template preview</p>
+            <h2 data-template-title>Industrial Stool</h2>
+            <p data-template-text>Stable hard-surface starter for seating, fixtures, and product mockups.</p>
+            <div class="tag-row" data-template-tags>
+              <span>hard-surface</span><span>furniture</span><span>clean topology</span>
+            </div>
           </div>
         </div>
-        <aside class='invoice-side'>
-          <p class='mono'>INCLUDED IN THE WORKFLOW</p>
-          <ul>
-            <li>Plain-language briefing</li>
-            <li>Drafts you can react to quickly</li>
-            <li>Edits by message</li>
-            <li>Launch support</li>
-            <li>Clear ownership</li>
-          </ul>
-        </aside>
       </div>
     </section>
 
-    <section id='faq' class='faq scene reveal'>
-      <div class='section-head'>
-        <p class='eyebrow mono'>FAQ</p>
-        <h2>Short answers. No funnel language.</h2>
+    <section class="station editor reveal" id="editor">
+      <div class="station-head">
+        <span>station_04</span>
+        <p>control graph</p>
       </div>
-      <div class='faq-list'>
-        <details open>
-          <summary>Do I need to use a website builder?</summary>
-          <p>No. The point is that the workflow happens in WhatsApp instead of inside a builder dashboard.</p>
-        </details>
-        <details>
-          <summary>Can I ask for changes after the first draft?</summary>
-          <p>Yes. Reply with edits exactly how you would message a person: add pricing, change colors, move sections, simplify copy.</p>
-        </details>
-        <details>
-          <summary>Can it work for local businesses and simple service sites?</summary>
-          <p>Yes. It is especially useful for offers that need a clear homepage, contact path, social proof, and mobile-friendly action.</p>
-        </details>
-        <details>
-          <summary>What about domains and launch setup?</summary>
-          <p>The publish path includes the practical setup work so you do not need to stitch tools together yourself.</p>
-        </details>
-        <details>
-          <summary>Can agencies use it with clients?</summary>
-          <p>Yes. Agencies can relay rough notes in chat and use the drafts as a fast approval and production layer.</p>
-        </details>
-      </div>
-    </section>
 
-    <section id='cta' class='cta-strip scene reveal'>
-      <div class='composer'>
-        <div class='composer-top'>
-          <p class='mono'>OPEN A THREAD, NOT A PROJECT</p>
-          <h2>Send the first message and start building.</h2>
+      <div class="editor-layout">
+        <div class="graph-board reveal-graph">
+          <svg class="graph-svg" viewBox="0 0 980 540" aria-hidden="true">
+            <defs>
+              <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#3df2ff" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#3df2ff" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <g class="path-layer">
+              <path class="signal-path" d="M90 106 C174 106 166 164 254 164"/>
+              <path class="signal-path" d="M254 164 C338 164 332 104 424 104"/>
+              <path class="signal-path" d="M254 164 C346 164 344 262 440 262"/>
+              <path class="signal-path" d="M440 262 C528 262 528 182 630 182"/>
+              <path class="signal-path" d="M424 104 C528 104 526 182 630 182"/>
+              <path class="signal-path" d="M630 182 C724 182 722 120 808 120"/>
+              <path class="signal-path" d="M630 182 C718 182 722 322 808 322"/>
+              <path class="signal-path" d="M808 322 C870 322 878 250 926 250"/>
+              <path class="signal-path signal-alt" d="M440 262 C500 262 506 398 600 398 694 398 694 322 808 322"/>
+            </g>
+            <g class="node-layer">
+              <g class="node-group"><circle cx="90" cy="106" r="22"/><text x="58" y="70">prompt</text></g>
+              <g class="node-group"><circle cx="254" cy="164" r="24"/><text x="206" y="128">primitive</text></g>
+              <g class="node-group accent"><circle cx="424" cy="104" r="24"/><text x="382" y="68">profile</text></g>
+              <g class="node-group"><circle cx="440" cy="262" r="24"/><text x="392" y="226">detail</text></g>
+              <g class="node-group accent-alt"><circle cx="630" cy="182" r="28"/><text x="588" y="144">material</text></g>
+              <g class="node-group"><circle cx="808" cy="120" r="22"/><text x="770" y="84">uv</text></g>
+              <g class="node-group"><circle cx="808" cy="322" r="24"/><text x="758" y="286">variants</text></g>
+              <g class="node-group accent"><circle cx="926" cy="250" r="22"/><text x="890" y="214">export</text></g>
+              <g class="node-group accent-alt"><circle cx="600" cy="398" r="18"/><text x="552" y="438">physics</text></g>
+            </g>
+            <g class="pulse-layer">
+              <circle class="pulse p1" cx="254" cy="164" r="60" fill="url(#nodeGlow)"/>
+              <circle class="pulse p2" cx="630" cy="182" r="78" fill="url(#nodeGlow)"/>
+              <circle class="pulse p3" cx="808" cy="322" r="74" fill="url(#nodeGlow)"/>
+            </g>
+          </svg>
         </div>
-        <div class='composer-body'>
-          <span class='prefill'>Hi — build me a simple site for my business. Dark look. Add WhatsApp CTA and testimonials.</span>
-          <a class='button button-wa js-wa' data-text='Hi — build me a simple site for my business. Dark look. Add WhatsApp CTA and testimonials.' href='#'>Open WhatsApp</a>
+
+        <div class="editor-notes">
+          <p class="eyebrow">Visible causality</p>
+          <h2>The page routes like the product.</h2>
+          <div class="note-list">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Prompt becomes a starting structure</h3>
+                <p>Language seeds the graph instead of ending the process at a single opaque output.</p>
+              </div>
+            </article>
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Signals branch into editable systems</h3>
+                <p>Shape, detail, material, and variation can be rerouted without throwing away the original idea.</p>
+              </div>
+            </article>
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Results stay usable downstream</h3>
+                <p>Generate for concept art, game assets, product visualization, and procedural kit building with export in mind.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="station outputs reveal" id="outputs">
+      <div class="station-head">
+        <span>station_05</span>
+        <p>finished assets</p>
+      </div>
+
+      <div class="outputs-grid">
+        <article class="output-card">
+          <div class="turntable">
+            <div class="platter"></div>
+            <div class="micro-object micro-prop"></div>
+          </div>
+          <p class="output-type">Game Props</p>
+          <h3>Fast ideation for hard-surface assets</h3>
+          <p>Block out usable props and iterate through form families before moving deeper into production.</p>
+        </article>
+
+        <article class="output-card">
+          <div class="turntable">
+            <div class="platter"></div>
+            <div class="micro-object micro-pack"></div>
+          </div>
+          <p class="output-type">Packaging</p>
+          <h3>Container concepts with material direction</h3>
+          <p>Move from prompt to shelf-ready silhouettes for bottles, jars, vessels, and product presentation mockups.</p>
+        </article>
+
+        <article class="output-card">
+          <div class="turntable">
+            <div class="platter"></div>
+            <div class="micro-object micro-device"></div>
+          </div>
+          <p class="output-type">Product Visualization</p>
+          <h3>Devices, accessories, and concept hardware</h3>
+          <p>Shape variants and node-level adjustments help explore industrial and speculative object systems quickly.</p>
+        </article>
+
+        <article class="output-card">
+          <div class="turntable">
+            <div class="platter"></div>
+            <div class="micro-object micro-wearable"></div>
+          </div>
+          <p class="output-type">Wearables + Sci-Fi</p>
+          <h3>Build kits for helmets, gear, and modular parts</h3>
+          <p>Use templates and graph edits to create families of components instead of one-off renders.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="station workflow reveal">
+      <div class="station-head">
+        <span>station_06</span>
+        <p>workflow + compatibility</p>
+      </div>
+
+      <div class="workflow-strip">
+        <article><span>01</span><h3>Prompt</h3><p>Describe the object, intent, and material direction.</p></article>
+        <article><span>02</span><h3>Generate</h3><p>Get a structured volume rather than a dead-end concept image.</p></article>
+        <article><span>03</span><h3>Edit</h3><p>Open the graph and control detail, hierarchy, and variation.</p></article>
+        <article><span>04</span><h3>Export</h3><p>Ship usable assets into your existing 3D pipeline.</p></article>
+      </div>
+
+      <div class="trust-grid">
+        <article>
+          <p>speed</p>
+          <h3>From prompt to volume in seconds</h3>
+        </article>
+        <article>
+          <p>editability</p>
+          <h3>Outputs remain controllable in nodes</h3>
+        </article>
+        <article>
+          <p>ownership</p>
+          <h3>Built for asset production, not locked demos</h3>
+        </article>
+        <article>
+          <p>compatibility</p>
+          <h3>Designed to fit real 3D workflows</h3>
+        </article>
+      </div>
+
+      <div class="export-row">
+        <span>GLB</span><span>OBJ</span><span>FBX</span><span>USDZ</span><span>Blender</span><span>Unity</span><span>Unreal</span>
+      </div>
+    </section>
+
+    <section class="station activation reveal" id="start">
+      <div class="activation-panel">
+        <div class="activation-copy">
+          <p class="eyebrow">station_07 / activation</p>
+          <h2>Open the workbench.</h2>
+          <p>Start generating, jump into the editor, or request access and bring your next object system online.</p>
+        </div>
+        <div class="activation-actions">
+          <a class="btn btn-primary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Start Generating</a>
+          <a class="btn btn-secondary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Open Editor</a>
+          <a class="btn btn-ghost" href="mailto:hello@phydgital.plus?subject=Request%20access%20to%20phydgital.plus">Request Access</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class='footer'>
-    <p>WhatsApp Website Agent</p>
-    <p class='mono'>A website builder collapsed into a conversation.</p>
+  <footer class="footer">
+    <span>phydgital.plus</span>
+    <span>text-to-3d + node-based editing</span>
   </footer>
 </body>
 </html>
