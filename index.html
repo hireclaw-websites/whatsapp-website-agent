@@ -1,383 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>phydgital.plus — Prompt in. Geometry out.</title>
-  <meta name="description" content="Text-to-3D generation and node-based editing for creators who want speed without losing control.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пирамида Tokyo — Russian Billiards Club</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
+    <div class="table-container">
+        <div class="felt-surface">
+            <div class="corner-pocket tl"></div>
+            <div class="corner-pocket tr"></div>
+            <div class="corner-pocket bl"></div>
+            <div class="corner-pocket br"></div>
 
-  <header class="topbar">
-    <a href="#generate" class="brand">
-      <span class="brand-mark"></span>
-      <span>phydgital.plus</span>
-    </a>
-    <nav class="nav">
-      <a href="#generate">Generate</a>
-      <a href="#templates">Templates</a>
-      <a href="#editor">Node Editor</a>
-      <a href="#outputs">Outputs</a>
-      <a href="#start">Start</a>
-    </nav>
-    <a class="tool-btn" href="https://phydgital.plus" target="_blank" rel="noreferrer">Open Workbench</a>
-  </header>
+            <div class="cue-stick"></div>
 
-  <main>
-    <section class="station hero reveal" id="generate">
-      <div class="station-head">
-        <span>station_01</span>
-        <p>object genesis</p>
-      </div>
-
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow">The Generative Workbench</p>
-          <h1>Prompt in.<br>Geometry out.</h1>
-          <p class="lead">Text-to-3D generation paired with a node-based editor, starter modules, and export-ready assets that stay editable after the first result.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Start Generating</a>
-            <a class="btn btn-secondary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Open Editor</a>
-            <a class="btn btn-ghost" href="mailto:hello@phydgital.plus?subject=Request%20access%20to%20phydgital.plus">Request Access</a>
-          </div>
-          <ul class="hero-meta">
-            <li>text → volume</li>
-            <li>volume → graph</li>
-            <li>graph → export</li>
-          </ul>
-        </div>
-
-        <div class="chamber-panel">
-          <div class="prompt-strip">
-            <span class="prompt-label">prompt</span>
-            <span class="typed" aria-live="polite"></span><span class="cursor"></span>
-            <span class="strip-status">parse / build / route</span>
-          </div>
-
-          <div class="object-chamber" data-phase="0">
-            <div class="axis axis-x"></div>
-            <div class="axis axis-y"></div>
-            <div class="axis axis-z"></div>
-            <div class="bounding-box">
-              <span class="measure top">112u</span>
-              <span class="measure side">84u</span>
-              <span class="measure bottom">editable topology</span>
+            <div class="ball white-ball" data-section="about">
+                <div class="ball-shine"></div>
+                <span class="ball-label">О клубе</span>
             </div>
 
-            <div class="route-map" aria-hidden="true">
-              <svg viewBox="0 0 900 520" preserveAspectRatio="none">
-                <path class="signal signal-a" d="M96 400 C170 400 178 314 242 314 S352 410 430 410 534 302 612 302 708 370 804 370"/>
-                <path class="signal signal-b" d="M104 446 C188 446 202 246 296 246 S434 392 500 392 608 208 692 208 772 248 822 248"/>
-                <path class="signal signal-c" d="M112 326 C196 326 224 176 320 176 S446 294 534 294 626 144 714 144 772 164 836 164"/>
-              </svg>
+            <div class="ball yellow-ball" data-section="game">
+                <div class="ball-shine"></div>
+                <span class="ball-label">Игра</span>
             </div>
 
-            <div class="object-stack" aria-hidden="true">
-              <div class="primitive-cube">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="resolved-model">
-                <div class="halo"></div>
-                <div class="mesh"></div>
-                <div class="surface"></div>
-                <div class="scan scan-a"></div>
-                <div class="scan scan-b"></div>
-              </div>
+            <div class="ball red-ball" data-section="location">
+                <div class="ball-shine"></div>
+                <span class="ball-label">Место</span>
             </div>
 
-            <div class="chamber-floor"></div>
-          </div>
-
-          <div class="chamber-readout">
-            <div><span>input</span><strong>language parsed</strong></div>
-            <div><span>volume</span><strong>primitive assembled</strong></div>
-            <div><span>logic</span><strong>nodes linked</strong></div>
-            <div><span>asset</span><strong>export ready</strong></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="station modes reveal">
-      <div class="station-head">
-        <span>station_02</span>
-        <p>two operating modes</p>
-      </div>
-
-      <div class="mode-grid">
-        <article class="mode-card">
-          <div class="mode-top">
-            <span class="mode-index">01</span>
-            <h2>Generate from text</h2>
-          </div>
-          <p>Start with direct language instead of a blank viewport. Describe a form, material direction, or object family and get structured geometry fast.</p>
-          <div class="mode-visual visual-generate" aria-hidden="true">
-            <div class="mini-prompt">ribbed sports bottle with metal cap</div>
-            <div class="mini-flow"><span></span><span></span><span></span></div>
-            <div class="mini-volume"></div>
-          </div>
-          <ul class="mode-list">
-            <li>Fast concept-to-form starting point</li>
-            <li>Template-ready prompt inputs</li>
-            <li>Built for creators, not demo theatre</li>
-          </ul>
-        </article>
-
-        <article class="mode-card mode-card-alt">
-          <div class="mode-top">
-            <span class="mode-index">02</span>
-            <h2>Edit through nodes</h2>
-          </div>
-          <p>Branch the result into an editable graph. Route variation, structure, and material logic without treating the output like a black box.</p>
-          <div class="mode-visual visual-edit" aria-hidden="true">
-            <div class="mini-node n1">prompt</div>
-            <div class="mini-node n2">shape</div>
-            <div class="mini-node n3">detail</div>
-            <div class="mini-node n4">material</div>
-            <div class="mini-node n5">export</div>
-            <svg viewBox="0 0 400 210" preserveAspectRatio="none">
-              <path d="M58 36 C112 36 110 86 170 86"/>
-              <path d="M170 86 C226 86 218 40 278 40"/>
-              <path d="M170 86 C220 86 224 148 282 148"/>
-              <path d="M282 148 C326 148 330 94 360 94"/>
-              <path d="M278 40 C328 40 330 94 360 94"/>
-            </svg>
-          </div>
-          <ul class="mode-list">
-            <li>Editable procedural control</li>
-            <li>Visible signal flow, not hidden automation</li>
-            <li>Reusable graph logic for repeatable outputs</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="station templates reveal" id="templates">
-      <div class="station-head">
-        <span>station_03</span>
-        <p>starter modules</p>
-      </div>
-
-      <div class="templates-layout">
-        <div class="template-rack" role="tablist" aria-label="Template rack">
-          <button class="template-chip is-active" data-model="is-chair" data-title="Industrial Stool" data-text="Stable hard-surface starter for seating, fixtures, and product mockups." data-tags="hard-surface|furniture|clean topology">01 / stool frame</button>
-          <button class="template-chip" data-model="is-drone" data-title="Camera Drone" data-text="Balanced body and arm layout for aerial devices, robotics, and modular hardware." data-tags="robotics|product viz|symmetry">02 / drone rig</button>
-          <button class="template-chip" data-model="is-bottle" data-title="Ribbed Bottle" data-text="Container base with controllable silhouette, neck detail, and material treatment." data-tags="packaging|consumer object|surface detail">03 / bottle shell</button>
-          <button class="template-chip" data-model="is-vehicle" data-title="Concept Vehicle" data-text="Fast blockout for transport forms, wheels, cab volumes, and shell experiments." data-tags="mobility|game asset|rapid ideation">04 / vehicle body</button>
-          <button class="template-chip" data-model="is-helmet" data-title="Utility Helmet" data-text="Protective shell starter with visor, seam splits, and accessory mount zones." data-tags="wearable|sci-fi prop|modular">05 / helmet shell</button>
-        </div>
-
-        <div class="template-preview">
-          <div class="preview-stage is-chair">
-            <div class="preview-grid"></div>
-            <div class="template-object" aria-hidden="true">
-              <span class="body"></span>
-              <span class="part-a"></span>
-              <span class="part-b"></span>
-              <span class="part-c"></span>
-              <span class="part-d"></span>
-              <span class="part-e"></span>
+            <div class="ball blue-ball" data-section="visit">
+                <div class="ball-shine"></div>
+                <span class="ball-label">Визит</span>
             </div>
-          </div>
-          <div class="preview-meta">
-            <p class="eyebrow">Template preview</p>
-            <h2 data-template-title>Industrial Stool</h2>
-            <p data-template-text>Stable hard-surface starter for seating, fixtures, and product mockups.</p>
-            <div class="tag-row" data-template-tags>
-              <span>hard-surface</span><span>furniture</span><span>clean topology</span>
+
+            <div class="club-title">
+                <h1>ПИРАМИДА<span class="subtitle">TOKYO</span></h1>
+                <p class="tagline">Русский бильярд в сердце Токио</p>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
+    </div>
 
-    <section class="station editor reveal" id="editor">
-      <div class="station-head">
-        <span>station_04</span>
-        <p>control graph</p>
-      </div>
+    <div class="content-panel" id="content-panel">
+        <button class="close-btn" id="close-btn">×</button>
+        <div class="panel-inner" id="panel-content"></div>
+    </div>
 
-      <div class="editor-layout">
-        <div class="graph-board reveal-graph">
-          <svg class="graph-svg" viewBox="0 0 980 540" aria-hidden="true">
-            <defs>
-              <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#3df2ff" stop-opacity="0.9"/>
-                <stop offset="100%" stop-color="#3df2ff" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <g class="path-layer">
-              <path class="signal-path" d="M90 106 C174 106 166 164 254 164"/>
-              <path class="signal-path" d="M254 164 C338 164 332 104 424 104"/>
-              <path class="signal-path" d="M254 164 C346 164 344 262 440 262"/>
-              <path class="signal-path" d="M440 262 C528 262 528 182 630 182"/>
-              <path class="signal-path" d="M424 104 C528 104 526 182 630 182"/>
-              <path class="signal-path" d="M630 182 C724 182 722 120 808 120"/>
-              <path class="signal-path" d="M630 182 C718 182 722 322 808 322"/>
-              <path class="signal-path" d="M808 322 C870 322 878 250 926 250"/>
-              <path class="signal-path signal-alt" d="M440 262 C500 262 506 398 600 398 694 398 694 322 808 322"/>
-            </g>
-            <g class="node-layer">
-              <g class="node-group"><circle cx="90" cy="106" r="22"/><text x="58" y="70">prompt</text></g>
-              <g class="node-group"><circle cx="254" cy="164" r="24"/><text x="206" y="128">primitive</text></g>
-              <g class="node-group accent"><circle cx="424" cy="104" r="24"/><text x="382" y="68">profile</text></g>
-              <g class="node-group"><circle cx="440" cy="262" r="24"/><text x="392" y="226">detail</text></g>
-              <g class="node-group accent-alt"><circle cx="630" cy="182" r="28"/><text x="588" y="144">material</text></g>
-              <g class="node-group"><circle cx="808" cy="120" r="22"/><text x="770" y="84">uv</text></g>
-              <g class="node-group"><circle cx="808" cy="322" r="24"/><text x="758" y="286">variants</text></g>
-              <g class="node-group accent"><circle cx="926" cy="250" r="22"/><text x="890" y="214">export</text></g>
-              <g class="node-group accent-alt"><circle cx="600" cy="398" r="18"/><text x="552" y="438">physics</text></g>
-            </g>
-            <g class="pulse-layer">
-              <circle class="pulse p1" cx="254" cy="164" r="60" fill="url(#nodeGlow)"/>
-              <circle class="pulse p2" cx="630" cy="182" r="78" fill="url(#nodeGlow)"/>
-              <circle class="pulse p3" cx="808" cy="322" r="74" fill="url(#nodeGlow)"/>
-            </g>
-          </svg>
+    <div class="content-data" style="display:none;">
+        <div data-content="about">
+            <h2>О клубе</h2>
+            <p>Пирамида Tokyo — единственный клуб русского бильярда в Японии. Основан в 2019 году энтузиастами, стремившимися сохранить традиции игры за пределами России.</p>
+            <p>У нас четыре профессиональных стола 12-футового размера, изготовленных по классическим стандартам. Войлочное покрытие регулярно обновляется, шары и кии проходят техническое обслуживание каждую неделю.</p>
+            <p>Мы принимаем игроков любого уровня — от новичков до мастеров спорта. В клубе царит дружелюбная атмосфера, где русскоязычные эмигранты и японские любители бильярда объединяются общей страстью к точной игре.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <strong>4</strong>
+                    <span>столa</span>
+                </div>
+                <div class="stat-item">
+                    <strong>180+</strong>
+                    <span>членов</span>
+                </div>
+                <div class="stat-item">
+                    <strong>2019</strong>
+                    <span>год основания</span>
+                </div>
+            </div>
         </div>
 
-        <div class="editor-notes">
-          <p class="eyebrow">Visible causality</p>
-          <h2>The page routes like the product.</h2>
-          <div class="note-list">
-            <article>
-              <span>01</span>
-              <div>
-                <h3>Prompt becomes a starting structure</h3>
-                <p>Language seeds the graph instead of ending the process at a single opaque output.</p>
-              </div>
-            </article>
-            <article>
-              <span>02</span>
-              <div>
-                <h3>Signals branch into editable systems</h3>
-                <p>Shape, detail, material, and variation can be rerouted without throwing away the original idea.</p>
-              </div>
-            </article>
-            <article>
-              <span>03</span>
-              <div>
-                <h3>Results stay usable downstream</h3>
-                <p>Generate for concept art, game assets, product visualization, and procedural kit building with export in mind.</p>
-              </div>
-            </article>
-          </div>
+        <div data-content="game">
+            <h2>Игра</h2>
+            <p>Русский бильярд, или «Пирамида», радикально отличается от американского пула и снукера. Главная сложность — лузы лишь на миллиметры шире шара, что требует исключительной точности.</p>
+            <h3>Основные правила</h3>
+            <ul>
+                <li><strong>Шары:</strong> 15 одинаковых шаров (68 мм) + 1 битка</li>
+                <li><strong>Стол:</strong> 12 футов (3,6 м), строгие допуски</li>
+                <li><strong>Цель:</strong> забить 8 шаров (классика) или все 15 (американка)</li>
+                <li><strong>Особенность:</strong> можно играть любым шаром как биткой</li>
+            </ul>
+            <h3>Разновидности</h3>
+            <p><em>Русская пирамида</em> — классическая игра с максимальной сложностью.<br>
+            <em>Московская пирамида</em> — более динамичная, с возможностью заказа луз.<br>
+            <em>Свободная пирамида</em> — для начинающих, более прощающая ошибки.</p>
+            <p class="highlight">В нашем клубе мы обучаем всем трём видам и проводим еженедельные турниры.</p>
         </div>
-      </div>
-    </section>
 
-    <section class="station outputs reveal" id="outputs">
-      <div class="station-head">
-        <span>station_05</span>
-        <p>finished assets</p>
-      </div>
-
-      <div class="outputs-grid">
-        <article class="output-card">
-          <div class="turntable">
-            <div class="platter"></div>
-            <div class="micro-object micro-prop"></div>
-          </div>
-          <p class="output-type">Game Props</p>
-          <h3>Fast ideation for hard-surface assets</h3>
-          <p>Block out usable props and iterate through form families before moving deeper into production.</p>
-        </article>
-
-        <article class="output-card">
-          <div class="turntable">
-            <div class="platter"></div>
-            <div class="micro-object micro-pack"></div>
-          </div>
-          <p class="output-type">Packaging</p>
-          <h3>Container concepts with material direction</h3>
-          <p>Move from prompt to shelf-ready silhouettes for bottles, jars, vessels, and product presentation mockups.</p>
-        </article>
-
-        <article class="output-card">
-          <div class="turntable">
-            <div class="platter"></div>
-            <div class="micro-object micro-device"></div>
-          </div>
-          <p class="output-type">Product Visualization</p>
-          <h3>Devices, accessories, and concept hardware</h3>
-          <p>Shape variants and node-level adjustments help explore industrial and speculative object systems quickly.</p>
-        </article>
-
-        <article class="output-card">
-          <div class="turntable">
-            <div class="platter"></div>
-            <div class="micro-object micro-wearable"></div>
-          </div>
-          <p class="output-type">Wearables + Sci-Fi</p>
-          <h3>Build kits for helmets, gear, and modular parts</h3>
-          <p>Use templates and graph edits to create families of components instead of one-off renders.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="station workflow reveal">
-      <div class="station-head">
-        <span>station_06</span>
-        <p>workflow + compatibility</p>
-      </div>
-
-      <div class="workflow-strip">
-        <article><span>01</span><h3>Prompt</h3><p>Describe the object, intent, and material direction.</p></article>
-        <article><span>02</span><h3>Generate</h3><p>Get a structured volume rather than a dead-end concept image.</p></article>
-        <article><span>03</span><h3>Edit</h3><p>Open the graph and control detail, hierarchy, and variation.</p></article>
-        <article><span>04</span><h3>Export</h3><p>Ship usable assets into your existing 3D pipeline.</p></article>
-      </div>
-
-      <div class="trust-grid">
-        <article>
-          <p>speed</p>
-          <h3>From prompt to volume in seconds</h3>
-        </article>
-        <article>
-          <p>editability</p>
-          <h3>Outputs remain controllable in nodes</h3>
-        </article>
-        <article>
-          <p>ownership</p>
-          <h3>Built for asset production, not locked demos</h3>
-        </article>
-        <article>
-          <p>compatibility</p>
-          <h3>Designed to fit real 3D workflows</h3>
-        </article>
-      </div>
-
-      <div class="export-row">
-        <span>GLB</span><span>OBJ</span><span>FBX</span><span>USDZ</span><span>Blender</span><span>Unity</span><span>Unreal</span>
-      </div>
-    </section>
-
-    <section class="station activation reveal" id="start">
-      <div class="activation-panel">
-        <div class="activation-copy">
-          <p class="eyebrow">station_07 / activation</p>
-          <h2>Open the workbench.</h2>
-          <p>Start generating, jump into the editor, or request access and bring your next object system online.</p>
+        <div data-content="location">
+            <h2>Место</h2>
+            <p>Клуб расположен в районе Эбису, в пяти минутах ходьбы от станции Ebisu.</p>
+            <div class="address-box">
+                <strong>Адрес:</strong><br>
+                3-12-8 Ebisu, Shibuya-ku<br>
+                Tokyo 150-0013<br>
+                恵比寿3-12-8, 渋谷区, 東京
+            </div>
+            <h3>Как добраться</h3>
+            <ul>
+                <li>JR Yamanote Line → Ebisu Station (восточный выход)</li>
+                <li>Tokyo Metro Hibiya Line → Ebisu Station (выход 1)</li>
+                <li>Пешком 5 минут по Komazawa-dori в сторону Meguro</li>
+            </ul>
+            <p>Здание трёхэтажное, с красно-белым фасадом. Клуб на втором этаже, вывеска на русском и японском языках.</p>
+            <div class="hours">
+                <h3>Часы работы</h3>
+                <p>Вторник – Воскресенье: 14:00 – 00:00<br>
+                Понедельник: выходной<br>
+                <small>Последний вход в 23:00</small></p>
+            </div>
         </div>
-        <div class="activation-actions">
-          <a class="btn btn-primary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Start Generating</a>
-          <a class="btn btn-secondary" href="https://phydgital.plus" target="_blank" rel="noreferrer">Open Editor</a>
-          <a class="btn btn-ghost" href="mailto:hello@phydgital.plus?subject=Request%20access%20to%20phydgital.plus">Request Access</a>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <span>phydgital.plus</span>
-    <span>text-to-3d + node-based editing</span>
-  </footer>
+        <div data-content="visit">
+            <h2>Визит</h2>
+            <h3>Цены</h3>
+            <div class="pricing">
+                <div class="price-item">
+                    <strong>¥1,800 / час</strong>
+                    <span>Разовое посещение (стол)</span>
+                </div>
+                <div class="price-item">
+                    <strong>¥12,000 / месяц</strong>
+                    <span>Членство — безлимитные игры</span>
+                </div>
+                <div class="price-item">
+                    <strong>¥500</strong>
+                    <span>Аренда кия (опционально)</span>
+                </div>
+            </div>
+            <h3>Членство</h3>
+            <p>Членство даёт безлимитный доступ к столам, скидку 20% на напитки в баре, приоритетное бронирование столов и участие в закрытых турнирах клуба.</p>
+            <h3>Для новичков</h3>
+            <p>Каждую субботу в 15:00 проводится бесплатный вводный урок (60 минут). Предварительная запись обязательна.</p>
+            <h3>Контакты</h3>
+            <div class="contact-box">
+                <p><strong>Телефон:</strong> 03-5768-4122<br>
+                <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5acaba3aa85b5acb7a4a8aca1a4ebb1aaaebcaa">[email&#160;protected]</a><br>
+                <strong>LINE ID:</strong> @piramidatokyo</p>
+            </div>
+            <p class="cta">Приходите за точностью, оставайтесь за атмосферой.</p>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 </body>
 </html>
