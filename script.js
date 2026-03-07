@@ -1,76 +1,73 @@
-const phone='15551234567';
-const defaultText='Hi — I want to build a website in WhatsApp.';
-
-document.querySelectorAll('.js-wa').forEach(link=>{
-  const text=encodeURIComponent(link.dataset.text||defaultText);
-  link.href=`https://wa.me/${phone}?text=${text}`;
-  link.target='_blank';
-  link.rel='noopener';
-});
-
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting) entry.target.classList.add('in');
-  });
-},{threshold:.14});
-
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-const preview=document.getElementById('heroPreview');
-const chat=[...document.querySelectorAll('#heroChat .msg')];
-const els={
-  kicker:document.getElementById('heroKicker'),
-  title:document.getElementById('heroTitle'),
-  text:document.getElementById('heroText'),
-  button:document.getElementById('heroButton'),
-  status:document.getElementById('heroStatus'),
-  b1:document.getElementById('heroBlock1'),
-  m1:document.getElementById('heroMeta1'),
-  b2:document.getElementById('heroBlock2'),
-  m2:document.getElementById('heroMeta2'),
-  b3:document.getElementById('heroBlock3'),
-  m3:document.getElementById('heroMeta3')
-};
-
-const states=[
-  {accent:'#7b61ff',kicker:'DRAFT 01',title:'Night Cart Coffee',text:'Small-batch espresso for markets, late events, and office pop-ins.',button:'Chat to book',status:'structure built',blocks:[['Menu','Espresso • Oat latte • Cold brew'],['Events','Weddings • launches • markets'],['Location','Weekly route + live map']]},
-  {accent:'#7b61ff',kicker:'DRAFT 02',title:'Night Cart Coffee',text:'One-page homepage drafted with hero, offer, and contact path.',button:'Preview CTA',status:'draft expanded',blocks:[['Hero','Offer + headline'],['About','What makes it distinct'],['Contact','Direct path to inquire']]},
-  {accent:'#1f6fff',kicker:'EDIT APPLIED',title:'Night Cart Coffee',text:'Darker visual system added. Menu and map sections inserted.',button:'See menu',status:'style + sections updated',blocks:[['Menu','Signature drinks + prices'],['Map','Markets, route, and pop-ins'],['Hours','Late service schedule']]},
-  {accent:'#25d366',kicker:'CTA UPDATED',title:'Night Cart Coffee',text:'WhatsApp is now the main action across the page.',button:'Open WhatsApp',status:'chat CTA wired',blocks:[['Bookings','Primary WhatsApp action'],['Events','Quick inquiry path'],['Reviews','Proof close to CTA']]},
-  {accent:'#25d366',kicker:'READY TO PUBLISH',title:'Night Cart Coffee',text:'Mobile-ready draft complete with sections, action, and launch path.',button:'Publish site',status:'preview ready',blocks:[['Menu','Prices, drinks, and upsells'],['Map','Where to find the cart'],['Publish','Domain + launch setup']]}
+const typed = document.querySelector('.typed');
+const chamber = document.querySelector('.object-chamber');
+const prompts = [
+  'modular running shoe with translucent sole',
+  'folding camera drone with compact carbon body',
+  'ribbed ceramic bottle with steel cap and soft bevels'
 ];
 
-let step=0;
-const applyState=i=>{
-  const s=states[i];
-  preview.style.setProperty('--accent',s.accent);
-  els.kicker.textContent=s.kicker;
-  els.title.textContent=s.title;
-  els.text.textContent=s.text;
-  els.button.textContent=s.button;
-  els.status.textContent=s.status;
-  els.b1.textContent=s.blocks[0][0];
-  els.m1.textContent=s.blocks[0][1];
-  els.b2.textContent=s.blocks[1][0];
-  els.m2.textContent=s.blocks[1][1];
-  els.b3.textContent=s.blocks[2][0];
-  els.m3.textContent=s.blocks[2][1];
-  chat.forEach((msg,idx)=>msg.classList.toggle('is-on',idx<=i));
-};
+let promptIndex = 0;
+let charIndex = 0;
+let deleting = false;
 
-applyState(0);
-if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  setInterval(()=>{
-    step=(step+1)%states.length;
-    applyState(step);
-  },2200);
+function typeLoop() {
+  const current = prompts[promptIndex];
+
+  if (!deleting) {
+    charIndex += 1;
+    typed.textContent = current.slice(0, charIndex);
+
+    const progress = charIndex / current.length;
+    chamber.dataset.phase = progress > 0.82 ? '3' : progress > 0.48 ? '2' : progress > 0.18 ? '1' : '0';
+
+    if (charIndex < current.length) {
+      setTimeout(typeLoop, 38);
+    } else {
+      deleting = true;
+      setTimeout(typeLoop, 1300);
+    }
+  } else {
+    charIndex -= 1;
+    typed.textContent = current.slice(0, Math.max(0, charIndex));
+
+    if (charIndex > 0) {
+      setTimeout(typeLoop, 18);
+    } else {
+      deleting = false;
+      chamber.dataset.phase = '0';
+      promptIndex = (promptIndex + 1) % prompts.length;
+      setTimeout(typeLoop, 260);
+    }
+  }
 }
 
-document.querySelectorAll('.faq details').forEach(item=>{
-  item.addEventListener('toggle',()=>{
-    if(!item.open) return;
-    document.querySelectorAll('.faq details').forEach(other=>{
-      if(other!==item) other.open=false;
-    });
+typeLoop();
+
+const chips = document.querySelectorAll('.template-chip');
+const stage = document.querySelector('.preview-stage');
+const title = document.querySelector('[data-template-title]');
+const text = document.querySelector('[data-template-text]');
+const tags = document.querySelector('[data-template-tags]');
+
+function setTemplate(el) {
+  chips.forEach(chip => chip.classList.remove('is-active'));
+  el.classList.add('is-active');
+  stage.className = `preview-stage ${el.dataset.model}`;
+  title.textContent = el.dataset.title;
+  text.textContent = el.dataset.text;
+  tags.innerHTML = el.dataset.tags.split('|').map(tag => `<span>${tag}</span>`).join('');
+}
+
+chips.forEach(chip => {
+  ['mouseenter', 'focus', 'click'].forEach(evt => {
+    chip.addEventListener(evt, () => setTemplate(chip));
   });
 });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('in-view');
+  });
+}, { threshold: 0.18 });
+
+document.querySelectorAll('.reveal, .graph-board').forEach(el => observer.observe(el));
